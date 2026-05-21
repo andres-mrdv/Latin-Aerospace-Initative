@@ -1,0 +1,218 @@
+/*Es la base de mi código CSS*/
+
+:root{
+	--color-texto: rgb(27,27,27);  /*Declaro mi variable color de texto, igual es mi respaldo, es tonto ahorita que lo pienso*/
+}
+
+body{
+	margin: 0; /*Elimina el margen por defecto del navegador*/
+	font-family: "inter", sans-serif; /*Tipografía de la NASA jaja*/
+	box-sizing: border-box;    /*Evita problemas de desbordamiento*/
+	color: var(--color-texto); /*Primer uso de mi variable*/
+	height: 100vh; /*Asegura que el cuerpo ocupe toda la altura de la ventana*/
+	display: flex; /*Usa Flexbox para centrar el contenido*/
+	flex-direction: column; /*Organiza el contenido en una columna*/
+	justify-content: space-between; /*Espacia el contenido entre el header, main y footer*/;
+}
+
+/*Empiezo a modificar los estilos de los elementos*/
+
+/*FINALMENTE LA NAVBAR QUEDÓ, 2 DÍAS*/
+header{
+	background-color: rgb(0, 0, 0);
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+nav{ /*Elemento abuelo*/
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 85px;
+	width: 100%;
+	padding: 10px;
+
+}
+
+.logo-link{ /*Elemento papá de img*/
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo-link img{  /*Hijo*/
+	max-height: 100%;
+	width: auto !important;
+}
+
+.hamburguesa{
+	display: block;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.navul{
+	display: none;
+	list-style: none;
+}
+
+@media (min-width: 768px) {
+	.hamburguesa{
+		display: none;
+	}
+	.navul{
+		display: flex;
+		gap: 20px;
+		padding-right: 20px;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.navul li a:hover{
+		color: rgba(0,0,0,0.3);
+
+	}
+}
+
+/*Sección con imagen de fondo, título H1 y botón de "Conócenos"*/
+#hero{
+	padding-top: 500px;
+	display: flex;
+	background-image: url(../Imagenes/space.png);
+
+}
+	
+#hero h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+/*Diseños generales*/
+a,
+a:visited{
+	text-decoration: none; /*Elimina el subrayado por defecto de los enlaces*/
+	color: var(--color-texto, rgb(27,27,27)); /*Color de texto para enlaces*/
+}
+
+
+h1{
+	font-size: 3.5em;
+	color: var(--color-texto, rgb(27,27,27));
+}
+
+h2{
+	font-size: 3.0em;
+	color: var(--color-texto, rgb(27,27,27));
+}
+
+h3{
+	font-size: 2.0em;
+	color: var(--color-texto, rgb(27,27,27));
+}
+
+p{
+	font-size: 1.3em;
+	color: var(--color-texto, rgb(27,27,27));
+}
+
+#navbar1, 
+#navbar2,
+#conocenos {
+	text-decoration: none;
+	color: white;
+}
+
+#navbar1:hover,
+#navbar2:hover,
+#conocenos:hover {
+	color: rgb(116, 116, 116);
+	text-decoration: none;
+}
+
+
+
+
+
+button{
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 10px 20px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 7px;
+	background-color: rgb(14, 0, 48)
+}
+
+.about{
+	margin-top: 40em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+	padding: 50px 20px;
+	background-color: rgb(255, 255, 255);
+}
+
+
+
+
+/*Diseños posteriores*/
+.maslectura{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+.maslectura:hover{
+	color: rgba(0, 0, 0,0.5);
+	font-style: italic;
+}
+.ultalt{
+	text-decoration: none;
+	color: black;
+}
+.ultalt:hover{
+	color: rgba(0,0,0,0.5);
+	font-style: italic;
+}
+
+#slogan-texto{
+	text-align: center;
+	color: rgb(27,27,27);
+	font-style: italic;
+}		
+
+.container{
+	max-width: 1400px;
+	margin: auto;
+
+}
+
+
+
+footer{
+	background-color: rgb(136, 136, 136);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	
+}
+footer img{
+	align-items: center;
+	height: 60px;
+	max-width: 100%;
+	align-items: center;
+
+}
